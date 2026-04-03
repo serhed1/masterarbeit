@@ -1,0 +1,40 @@
+=== Head of Data ===
+            task_count compensation       remote
+3902931205           9  unspecified       onsite
+3894855473          11  unspecified       remote
+3899525675           4        mixed       hybrid
+3887106339           7  unspecified  unspecified
+3894555810          11        fixed  unspecified 
+
+=== Anzahl Einträge pro Compensation-Typ ===
+compensation
+unspecified    1128
+fixed           489
+variable        196
+mixed           180
+equity            7
+Name: count, dtype: int64 
+
+=== Durchschnittliche Task-Anzahl pro Compensation-Typ ===
+               count      mean       std  min  25%  50%    75%   max
+compensation                                                        
+equity           7.0  6.000000  1.825742  4.0  4.5  6.0   7.00   9.0
+fixed          489.0  8.597137  4.753695  1.0  5.0  8.0  11.00  46.0
+mixed          180.0  7.983333  3.736391  1.0  5.0  8.0  10.00  20.0
+unspecified   1128.0  8.484043  4.346332  0.0  5.0  8.0  11.00  36.0
+variable       196.0  7.780612  4.326167  0.0  5.0  7.0   9.25  28.0 
+
+Korrelation (TaskCount vs CompensationType): -0.030
+=== Durchschnittliche Task-Anzahl nach Compensation & Remote-Typ ===
+remote        hybrid  onsite  remote  unspecified
+compensation                                     
+equity           NaN    7.50    4.00         5.75
+fixed           8.29    8.53    8.10         8.71
+mixed           8.25    7.12    7.69         8.15
+unspecified     8.00    8.12    7.53         8.77
+variable        9.07    8.15    7.25         7.66
+
+Levene-Test (Varianzgleichheit): W = 1.901, p = 0.1077 (Varianzen ~gleich)
+ANOVA (one-way): F = 2.248, p = 0.061660
+Effektgrößen: eta² = 0.0045, omega² = 0.0025
+Kruskal-Wallis: H = 10.408, p = 0.034094
